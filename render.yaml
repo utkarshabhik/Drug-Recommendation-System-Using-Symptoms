@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: symptom-drug-info
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
